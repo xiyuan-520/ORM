@@ -3,8 +3,7 @@ package com.xiyuan.orm;
 import org.xiyuan.core.constants.CodeConstants;
 import org.xiyuan.core.constants.SignConstants;
 import org.xiyuan.core.constants.TypeConstants;
-import org.xiyuan.core.extend.KV;
-import org.xiyuan.core.util.consts.Int;
+import org.xiyuan.core.util.consts.KV;
 
 /**
  * ORM常量定义
@@ -13,7 +12,8 @@ import org.xiyuan.core.util.consts.Int;
  */
 public interface ORMConstants extends SignConstants, TypeConstants, CodeConstants
 {
-    public enum CALL_TYPE {IN, INOUT, OUT};
+
+ public enum CALL_TYPE {IN, INOUT, OUT};
     
     /*****************************************************************************/
     //目前支持的6种数据库类型
@@ -39,18 +39,7 @@ public interface ORMConstants extends SignConstants, TypeConstants, CodeConstant
     /*****************************************************************************/
     //目前支持的9种列类型
     /*****************************************************************************/
-    
-    public Int ORM_STRING                    = new Int(1, "string");
-    public Int ORM_INT                       = new Int(2, "int");
-    public Int ORM_LONG                      = new Int(3, "long");
-    public Int ORM_BOOLEAN                   = new Int(4, "boolean");
-    public Int ORM_BYTE                      = new Int(5, "byte");
-    public Int ORM_SHORT                     = new Int(6, "short");
-    
-    public Int ORM_DATETIME                  = new Int(7, "datetime");
-    public Int ORM_DECIMAL                   = new Int(8, "decimal");
-    public Int ORM_BINARY                    = new Int(9, "binary");
-    
+
     public int ORM_STRING_INT                = 1;
     public int ORM_INT_INT                   = 2;
     public int ORM_LONG_INT                  = 3;
@@ -60,6 +49,17 @@ public interface ORMConstants extends SignConstants, TypeConstants, CodeConstant
     public int ORM_DATETIME_INT              = 7;
     public int ORM_DECIMAL_INT               = 8;
     public int ORM_BINARY_INT                = 9;
+    
+    public KV<Integer, String> ORM_STRING    = new KV<Integer, String>(ORM_STRING_INT, "string");
+    public KV<Integer, String> ORM_INT       = new KV<Integer, String>(ORM_INT_INT, "int");
+    public KV<Integer, String> ORM_LONG      = new KV<Integer, String>(ORM_LONG_INT, "long");
+    public KV<Integer, String> ORM_BOOLEAN   = new KV<Integer, String>(ORM_BOOLEAN_INT, "boolean");
+    public KV<Integer, String> ORM_BYTE      = new KV<Integer, String>(ORM_BYTE_INT, "byte");
+    public KV<Integer, String> ORM_SHORT     = new KV<Integer, String>(ORM_SHORT_INT, "short");
+    public KV<Integer, String> ORM_DATETIME  = new KV<Integer, String>(ORM_DATETIME_INT, "datetime");
+    public KV<Integer, String> ORM_DECIMAL   = new KV<Integer, String>(ORM_DECIMAL_INT, "decimal");
+    public KV<Integer, String> ORM_BINARY    = new KV<Integer, String>(ORM_BINARY_INT, "binary");
+    
     
     /*****************************************************************************/
     //SQL条件
